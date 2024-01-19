@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/sass/_common.scss"],"names":[],"mappings":"AAAA,EACE,qBAAA,CAGF,GACE,eAAA","file":"main.min.c461b3c2.css","sourceRoot":"../src","sourcesContent":["* {\n  box-sizing: border-box;\n}\n\nli {\n  list-style: none;\n}"]}
