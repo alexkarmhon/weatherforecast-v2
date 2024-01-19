@@ -2,6 +2,7 @@
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --fav-black-color: #4f4f4f;
   --fav-white-color: #e8e8e8;
+  --body-main-color: #06283d;
   --accent-color: #7cafd8; 
 }
 
@@ -9,14 +10,26 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
+  border: 0;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
+
   // font-family: "Gruppo", sans-serif;
   font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   color: var(--fav-black-color);
 }
 

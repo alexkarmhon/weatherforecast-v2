@@ -2,6 +2,7 @@
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --fav-black-color: #4f4f4f;
   --fav-white-color: #e8e8e8;
+  --body-main-color: #06283d;
   --accent-color: #7cafd8;
 }
 
@@ -9,13 +10,24 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
+  border: 0;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   color: var(--fav-black-color);
 }
 
@@ -23,23 +35,108 @@ li {
   list-style: none;
 }
 
-.weather-icon {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  padding: 28px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 18px;
+  transition: 0.6s ease-out;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.search-box input {
+  width: 80%;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-left: 32px;
+}
+.search-box input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.search-box .tool-icon {
+  margin: 0;
+  width: 2em;
+  height: 2em;
+}
+
+button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #dff6ff;
+  transition: 250ms var(--timing-function);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.weather {
+  text-align: center;
+  width: 80%;
+}
+.weather .weather-icon {
   display: inline-block;
-  width: 10em;
-  height: 10em;
+  width: 160px;
+  height: 160px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
 }
+.weather .weather__temp {
+  margin-bottom: 30px;
+  font-size: 80px;
+  font-weight: 700;
+}
+.weather .weather__city {
+  margin-bottom: 30px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.weather__details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.detail-box .detail-icon {
+  width: 90px;
+  height: 90px;
+  fill: currentColor;
+}
+.detail-box .details-info {
+  font-size: 24px;
+  font-weight: 500;
+}
 
 body.light-theme {
   background-color: var(--fav-white-color);
-  color: var(--fav-black-color);
+  color: var(--body-main-color);
 }
 
 body.dark-theme {
-  background-color: var(--fav-black-color);
-  color: var(--fav-white-color);
+  background-color: var(--body-main-color);
+  color: var(--fav-black-color);
 }
 
 .toolbar {
@@ -53,7 +150,7 @@ body.dark-theme {
   align-items: center;
 }
 
-.theme-switch__icon {
+.theme-switch__icon, .tool-icon {
   color: currentColor;
   stroke-width: 0;
   fill: currentColor;

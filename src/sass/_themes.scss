@@ -1,9 +1,11 @@
 body.light-theme {
   background-color: var(--fav-white-color);
-  color: var(--fav-black-color);
+  color: var(--body-main-color);
 }
 
 body.dark-theme {
-  background-color: var(--fav-black-color);
-  color: var(--fav-white-color);
+  // background-color: var(--fav-black-color);
+  background-color: var(--body-main-color);
+  color: var(--fav-black-color);
 }
+
