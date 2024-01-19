@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../node_modules/modern-normalize/modern-normalize.css">
-  <link rel="stylesheet" href="../css/main.min.css">
-  <title>WeatherForecastV2</title>
-</head>
-<body>
-  <h1>My own parcel template1</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/modern-normalize/modern-normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.min.css" />
+    <title>WeatherForecastV2</title>
+  </head>
+  <body>
+    <div class="toolbar">
+      <div class="theme-switch">
+        <svg class="theme-switch__icon" role="img" aria-label="sun icon">
+          <use href="./images/weather-icons.svg#sun"></use>
+        </svg>
+        <div class="theme-switch__control">
+          <input
+            type="checkbox"
+            class="theme-switch__toggle"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Light to dark switcher"
+          />
+          <label
+            for="theme-switch-toggle"
+            class="theme-switch__track"
+            aria-hidden="true"
+          ></label>
+          <div class="theme-switch__marker" aria-hidden="true"></div>
+        </div>
+        <svg class="theme-switch__icon" role="img" aria-label="sun icon">
+          <use href="./images/weather-icons.svg#moon1"></use>
+        </svg>
+      </div>
+    </div>
 
-
-  <script src="./index.js"></script>
-</body>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
+
+<!-- <svg class="weather-icon" role="img" aria-label="cloud">
+  <use href="./images/weather-icons.svg#sun"></use>
+</svg> -->

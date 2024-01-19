@@ -1,7 +1,26 @@
-* {
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --fav-black-color: #4f4f4f;
+  --fav-white-color: #e8e8e8;
+  --accent-color: #7cafd8; 
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // font-family: "Gruppo", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  color: var(--fav-black-color);
 }
 
 li {
   list-style: none;
 }
+
