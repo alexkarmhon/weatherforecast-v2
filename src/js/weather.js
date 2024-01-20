@@ -15,7 +15,7 @@ async function getWeather(e) {
   const city = e.target.elements.cityname.value;
   const resp = await fetch(`${BASE_URL}/weather?q=${city}&units=metric&appid=${API_KEY}`);
 
-  if (!resp.status.ok || !city) {
+  if (!resp.ok || !city) {
     errorMsg.classList.remove('is-hidden');
     setTimeout(() => {
       errorMsg.classList.add('is-hidden');  
@@ -24,7 +24,7 @@ async function getWeather(e) {
   };
 
   const data = await resp.json()
-  console.log(data);
+  console.log(resp);
 
   document.querySelector('#weather__temp').innerHTML = Math.round(data.main.temp) + '&#8451';
   document.querySelector('#weather__city').innerHTML = data.name;
