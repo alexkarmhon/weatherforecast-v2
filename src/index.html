@@ -44,36 +44,50 @@
     <div class="container">
 
       <!-- Searchbox -->
-      <div class="search-box">
+      <!-- <div class="search-box">
         <svg class="tool-icon" role="img" aria-label="location">
           <use href="./images/sprite.svg#location-dot"></use>
         </svg>
-        <input type="text" placeholder="Enter your location" />
-        <button type="button">
+        <input id="search-input" class="search-input" type="text" placeholder="Enter your location" />
+        <button id="search-button" class="search-button" type="button">
           <svg class="tool-icon" role="img" aria-label="location">
             <use href="./images/sprite.svg#search"></use>
           </svg>
         </button>
+      </div> -->
+      <div class="search-box">
+        <form id="search-form" class="search-form">  
+        <svg class="tool-icon" role="img" aria-label="location">
+          <use href="./images/sprite.svg#location-dot"></use>
+        </svg>
+        <input id="search-input" class="search-input" type="text" name="cityname" placeholder="Enter your location"/>
+        <button id="search-button" class="search-button" type="submit">
+          <svg class="tool-icon" role="img" aria-label="location">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+        </button>  
+      <form/>
       </div>
-
+      <!-- Error -->
+      <p id="error" class="error">Invalid city name</p>
       <!-- Weatherbox -->
-      <div class="weather">
+      <div id="weather" class="weather is-hidden">
 
-        <div class="weather__image">
+        <div id="weather-image" class="weather__image">
           <svg class="weather-icon" role="img" aria-label="Current weather">
-            <use href="./images/weather-icons.svg#sun"></use>
+            <use id="weather-icon-path" href="./images/weather-icons.svg#sun"></use>
           </svg>
         </div>
 
-        <h1 class="weather__temp">7 &#8451</h1>
-        <h2 class="weather__city">Kharkiv</h2>
+        <h1 id="weather__temp" class="weather__temp">7 &#8451</h1>
+        <h2 id="weather__city" class="weather__city">Kharkiv</h2>
 
         <div class="weather__details">
           <div class="detail-box">
             <svg class="detail-icon" role="img" aria-label="Current weather">
               <use href="./images/weather-icons.svg#waves"></use>
             </svg>
-            <p class="details-info">87%</p>
+            <p id="humidity" class="details-info">87%</p>
             <p class="details-info">Humidity</p>
           </div>
 
@@ -81,8 +95,8 @@
             <svg class="detail-icon" role="img" aria-label="Current weather">
               <use href="./images/weather-icons.svg#wind1"></use>
             </svg>
-            <p class="details-info">87%</p>
-            <p class="details-info">Humidity</p>
+            <p id="wind-speed" class="details-info">87%</p>
+            <p class="details-info">Wind speed</p>
           </div>
 
         </div>

@@ -35,6 +35,10 @@ li {
   list-style: none;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -57,25 +61,34 @@ li {
   justify-content: space-between;
   position: relative;
 }
-.search-box input {
-  width: 80%;
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-left: 32px;
-}
-.search-box input::placeholder {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
 .search-box .tool-icon {
   margin: 0;
   width: 2em;
   height: 2em;
 }
 
-button {
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search-input {
+  width: 80%;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-left: 32px;
+}
+
+.search-input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.search-button {
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -85,9 +98,20 @@ button {
   transition: 250ms var(--timing-function);
 }
 
-button:hover {
+.search-button:hover {
   background-color: var(--accent-color);
   color: #fff;
+}
+
+.error.is-hidden {
+  display: none;
+  transition: 2500ms ease;
+}
+
+.error {
+  display: block;
+  color: tomato;
+  transition: 2500ms ease;
 }
 
 .weather {
