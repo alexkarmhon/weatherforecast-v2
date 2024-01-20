@@ -23,8 +23,7 @@ async function getWeather(e) {
     return;
   };
 
-  const data = await resp.json()
-  console.log(resp);
+  const data = await resp.json();
 
   document.querySelector('#weather__temp').innerHTML = Math.round(data.main.temp) + '&#8451';
   document.querySelector('#weather__city').innerHTML = data.name;
